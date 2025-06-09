@@ -1,0 +1,401 @@
+[2025-06-09 20:05:14,525: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:05:14,555: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:05:14,558: INFO: common: created directory at: artifacts]
+[2025-06-09 20:05:14,561: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:05:17,335: INFO: 2564092783: File is downloaded]
+[2025-06-09 20:13:29,413: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:13:33,256: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:13:33,260: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:13:33,264: INFO: common: created directory at: artifacts]
+[2025-06-09 20:13:33,266: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:25:55,654: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:25:56,349: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:25:56,353: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:25:56,372: INFO: common: created directory at: artifacts]
+[2025-06-09 20:25:56,372: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 20:30:00,591: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:30:06,304: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:30:06,307: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:30:06,311: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:30:06,330: INFO: common: created directory at: artifacts]
+[2025-06-09 20:30:06,335: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:30:08,855: INFO: data_ingestion: File is downloaded]
+[2025-06-09 20:30:09,212: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:30:09,214: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:30:09,215: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:30:09,223: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:30:09,226: INFO: common: created directory at: artifacts]
+[2025-06-09 20:30:09,227: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:30:16,251: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:30:16,251: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:30:16,257: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:30:16,262: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:30:16,262: INFO: common: created directory at: artifacts]
+[2025-06-09 20:30:16,262: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2025-06-09 20:34:55,080: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:34:58,034: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:34:58,037: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:34:58,037: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:34:58,037: INFO: common: created directory at: artifacts]
+[2025-06-09 20:34:58,037: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:34:58,037: INFO: data_ingestion: File already exits]
+[2025-06-09 20:34:58,221: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:34:58,221: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:34:58,221: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:34:58,221: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:34:58,221: INFO: common: created directory at: artifacts]
+[2025-06-09 20:34:58,221: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:35:00,928: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:35:00,928: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:35:00,928: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:35:00,928: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:35:00,928: INFO: common: created directory at: artifacts]
+[2025-06-09 20:35:00,945: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 20:35:13,783: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-09 20:39:54,778: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:40:00,369: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:40:00,378: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:40:00,383: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:40:00,384: INFO: common: created directory at: artifacts]
+[2025-06-09 20:40:00,384: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:40:00,384: INFO: data_ingestion: File already exits]
+[2025-06-09 20:40:00,600: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:40:00,600: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:40:00,600: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:40:00,600: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:40:00,600: INFO: common: created directory at: artifacts]
+[2025-06-09 20:40:00,600: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:40:04,570: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:40:04,570: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:40:04,570: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:40:04,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:40:04,586: INFO: common: created directory at: artifacts]
+[2025-06-09 20:40:04,586: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 20:40:33,372: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-09 20:43:35,506: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:43:38,194: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:43:38,205: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:43:38,205: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:43:38,205: INFO: common: created directory at: artifacts]
+[2025-06-09 20:43:38,210: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:43:38,210: INFO: data_ingestion: File already exits]
+[2025-06-09 20:43:38,394: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:43:38,394: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:43:38,394: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:43:38,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:43:38,401: INFO: common: created directory at: artifacts]
+[2025-06-09 20:43:38,402: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:43:41,207: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:43:41,207: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:43:41,215: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:43:41,217: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:43:41,220: INFO: common: created directory at: artifacts]
+[2025-06-09 20:43:41,220: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 20:43:52,624: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-09 20:48:32,941: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:48:36,818: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:48:36,818: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:48:36,818: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:48:36,818: INFO: common: created directory at: artifacts]
+[2025-06-09 20:48:36,818: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:48:36,830: INFO: data_ingestion: File already exits]
+[2025-06-09 20:48:37,025: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:48:37,025: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:48:37,025: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:48:37,037: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:48:37,037: INFO: common: created directory at: artifacts]
+[2025-06-09 20:48:37,037: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:48:38,423: ERROR: main: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates]
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 24, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 709, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 1825, in from_pretrained
+    return cls._from_pretrained(
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 1988, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 142, in __init__
+    super().__init__(
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 114, in __init__
+    fast_tokenizer = convert_slow_tokenizer(slow_tokenizer)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1307, in convert_slow_tokenizer
+    return converter_class(transformer_tokenizer).converted()
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\convert_slow_tokenizer.py", line 445, in __init__
+    from .utils import sentencepiece_model_pb2 as model_pb2
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\utils\sentencepiece_model_pb2.py", line 91, in <module>
+    _descriptor.EnumValueDescriptor(
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\google\protobuf\descriptor.py", line 933, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+[2025-06-09 20:49:25,078: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:49:28,839: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:49:28,839: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:49:28,839: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:49:28,839: INFO: common: created directory at: artifacts]
+[2025-06-09 20:49:28,850: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:49:28,850: INFO: data_ingestion: File already exits]
+[2025-06-09 20:49:29,025: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:49:29,025: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:49:29,040: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:49:29,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:49:29,044: INFO: common: created directory at: artifacts]
+[2025-06-09 20:49:29,044: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:49:39,461: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:49:39,461: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:49:39,470: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:49:39,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:49:39,475: INFO: common: created directory at: artifacts]
+[2025-06-09 20:49:39,475: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 20:49:55,081: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.20.1`: Please run `pip install transformers[torch]` or `pip install accelerate -U`]
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Users\Jatin\Desktop\textsummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 111, in __init__
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\training_args.py", line 1340, in __post_init__
+    and (self.device.type != "cuda")
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\training_args.py", line 1764, in device
+    return self._setup_devices
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\utils\generic.py", line 54, in __get__
+    cached = self.fget(obj)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\transformers\training_args.py", line 1672, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.20.1`: Please run `pip install transformers[torch]` or `pip install accelerate -U`
+[2025-06-09 20:50:19,984: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 20:50:26,870: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 20:50:26,872: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:50:26,877: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:50:26,877: INFO: common: created directory at: artifacts]
+[2025-06-09 20:50:26,877: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 20:50:26,880: INFO: data_ingestion: File already exits]
+[2025-06-09 20:50:27,078: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 20:50:27,078: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 20:50:27,082: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:50:27,085: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:50:27,087: INFO: common: created directory at: artifacts]
+[2025-06-09 20:50:27,088: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 20:50:29,075: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 20:50:29,075: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 20:50:29,088: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 20:50:29,090: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 20:50:29,090: INFO: common: created directory at: artifacts]
+[2025-06-09 20:50:29,090: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 22:42:28,020: INFO: config: PyTorch version 2.7.1 available.]
+[2025-06-09 22:42:35,013: INFO: main: stage Data Ingestion stage initiated]
+[2025-06-09 22:42:35,018: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 22:42:35,018: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 22:42:35,018: INFO: common: created directory at: artifacts]
+[2025-06-09 22:42:35,018: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-06-09 22:42:35,025: INFO: data_ingestion: File already exits]
+[2025-06-09 22:42:35,258: INFO: main: Stage Data Ingestion stage Completed]
+[2025-06-09 22:42:35,258: INFO: main: stage Data Transformation stage initiated]
+[2025-06-09 22:42:35,263: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 22:42:35,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 22:42:35,268: INFO: common: created directory at: artifacts]
+[2025-06-09 22:42:35,269: INFO: common: created directory at: artifacts/data_transformation]
+[2025-06-09 22:42:37,577: INFO: main: Stage Data Transformation stage Completed]
+[2025-06-09 22:42:37,577: INFO: main: stage Model Trainer stage initiated]
+[2025-06-09 22:42:37,593: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 22:42:37,597: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 22:42:37,598: INFO: common: created directory at: artifacts]
+[2025-06-09 22:42:37,600: INFO: common: created directory at: artifacts/model_trainer]
+[2025-06-09 23:26:58,197: INFO: main: Stage Model Trainer stage Completed]
+[2025-06-09 23:26:58,210: INFO: main: *******************]
+[2025-06-09 23:26:58,210: INFO: main: >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-06-09 23:26:58,238: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 23:26:58,248: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 23:26:58,249: INFO: common: created directory at: artifacts]
+[2025-06-09 23:26:58,250: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-09 23:29:43,047: INFO: rouge_scorer: Using default tokenizer.]
+[2025-06-09 23:29:43,245: INFO: main: >>>>>> stage Model Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-06-09 23:33:48,863: INFO: server: Started server process [5584]]
+[2025-06-09 23:33:48,865: INFO: on: Waiting for application startup.]
+[2025-06-09 23:33:48,866: INFO: on: Application startup complete.]
+[2025-06-09 23:33:48,866: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-06-09 23:34:39,751: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Jatin\Desktop\textsummarizer\app.py", line 41, in predict_route
+    raise e
+  File "C:\Users\Jatin\Desktop\textsummarizer\app.py", line 37, in predict_route
+    obj = PredictionPipeline()
+NameError: name 'PredictionPipeline' is not defined. Did you mean: 'prediction_pipeline'?
+[2025-06-09 23:34:42,269: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Jatin\Desktop\textsummarizer\venv\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Jatin\Desktop\textsummarizer\app.py", line 41, in predict_route
+    raise e
+  File "C:\Users\Jatin\Desktop\textsummarizer\app.py", line 37, in predict_route
+    obj = PredictionPipeline()
+NameError: name 'PredictionPipeline' is not defined. Did you mean: 'prediction_pipeline'?
+[2025-06-09 23:38:13,456: INFO: server: Shutting down]
+[2025-06-09 23:38:13,561: INFO: on: Waiting for application shutdown.]
+[2025-06-09 23:38:13,562: INFO: on: Application shutdown complete.]
+[2025-06-09 23:38:13,562: INFO: server: Finished server process [5584]]
+[2025-06-09 23:38:19,626: INFO: server: Started server process [16128]]
+[2025-06-09 23:38:19,627: INFO: on: Waiting for application startup.]
+[2025-06-09 23:38:19,627: INFO: on: Application startup complete.]
+[2025-06-09 23:38:19,628: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-06-09 23:39:47,897: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 23:39:47,921: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 23:39:47,923: INFO: common: created directory at: artifacts]
+[2025-06-09 23:39:47,923: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-09 23:47:06,252: INFO: server: Shutting down]
+[2025-06-09 23:47:06,361: INFO: on: Waiting for application shutdown.]
+[2025-06-09 23:47:06,363: INFO: on: Application shutdown complete.]
+[2025-06-09 23:47:06,364: INFO: server: Finished server process [16128]]
+[2025-06-09 23:47:13,471: ERROR: utils: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+]
+[2025-06-09 23:47:32,933: INFO: server: Started server process [21936]]
+[2025-06-09 23:47:32,933: INFO: on: Waiting for application startup.]
+[2025-06-09 23:47:32,933: INFO: on: Application startup complete.]
+[2025-06-09 23:47:32,933: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-06-09 23:48:23,996: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 23:48:23,997: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 23:48:24,000: INFO: common: created directory at: artifacts]
+[2025-06-09 23:48:24,000: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-09 23:53:11,355: INFO: server: Shutting down]
+[2025-06-09 23:53:11,464: INFO: on: Waiting for application shutdown.]
+[2025-06-09 23:53:11,466: INFO: on: Application shutdown complete.]
+[2025-06-09 23:53:11,466: INFO: server: Finished server process [21936]]
+[2025-06-09 23:55:36,657: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-09 23:55:36,657: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-09 23:55:36,657: INFO: common: created directory at: artifacts]
+[2025-06-09 23:55:36,657: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-10 00:04:48,073: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-10 00:04:48,073: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-10 00:04:48,083: INFO: common: created directory at: artifacts]
+[2025-06-10 00:04:48,085: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-10 00:06:11,276: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-10 00:06:11,279: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-10 00:06:11,283: INFO: common: created directory at: artifacts]
+[2025-06-10 00:06:11,285: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-10 00:06:44,089: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-10 00:06:44,103: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-10 00:06:44,103: INFO: common: created directory at: artifacts]
+[2025-06-10 00:06:44,103: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-10 00:10:33,249: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-10 00:10:33,249: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-10 00:10:33,249: INFO: common: created directory at: artifacts]
+[2025-06-10 00:10:33,249: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-06-10 00:17:30,598: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-06-10 00:17:30,605: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-06-10 00:17:30,608: INFO: common: created directory at: artifacts]
+[2025-06-10 00:17:30,611: INFO: common: created directory at: artifacts/model_evaluation]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Summarization</h1>
+      <form action="/predict" method="post">
+        <textarea
+          name="text"
+          rows="10"
+          placeholder="Paste a long paragraph here..."
+        >
+{{ text or '' }}</textarea
+        >
+        <button type="submit">Summarize</button>
+      </form>
+
+      {% if result %}
+      <div class="result">
+        <h2>Summary:</h2>
+        <p>{{ result }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
