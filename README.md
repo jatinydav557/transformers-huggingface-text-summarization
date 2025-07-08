@@ -1,11 +1,4 @@
-You are correct\! The "branch format" (which I assume you mean the directory tree visualization) for the `Project Structure` section did not render correctly in our previous conversation because it relies on specific formatting that some markdown parsers, including the one I use for displaying text, might not fully support or render perfectly.
-
-When you copy that markdown into a GitHub README, it *should* render correctly on GitHub's platform, as GitHub's markdown renderer is designed to handle such structures.
-
-I will provide the entire README again, ensuring the "Project Structure" section is formatted using spaces and `├──` and `└──` characters, which is the common way to represent a directory tree in plain text that GitHub's markdown engine typically understands well.
-
-Here is the complete README again, with the project structure explicitly formatted for better rendering on GitHub:
-
+🔗 👉 **[Watch the Demo on YouTube](https://www.youtube.com/watch?v=TTt2aFM7G5c&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=2&ab_channel=Jatin)**
 -----
 
 # 📝 Abstractive Text Summarization
@@ -228,18 +221,20 @@ The `ModelEvaluation` component calculates these scores and saves them to a CSV 
 
 ## 🤝 Credits
 
-  * [Your Name/Organization Here]
+  * [Jatin Yadav]
   * [Hugging Face Transformers](https://huggingface.co/docs/transformers/index)
   * [Hugging Face Datasets](https://huggingface.co/docs/datasets/index)
   * [PyTorch](https://pytorch.org/)
-  * [Samsum Dataset](https://huggingface.co/datasets/samsum) (Assumed dataset)
+  * [Samsum Dataset](https://huggingface.co/datasets/samsum) (Assumed dataset /  I took from someone else's profile)
 
 -----
 
 ## 🙋‍♂️ Let's Connect
 
-  * **💼 LinkedIn:** [Your LinkedIn Profile URL]
-  * **📦 GitHub:** [Your GitHub Profile URL]
-  * **📬 Email:** your@email.com
+* **💼 LinkedIn:** [www.linkedin.com/in/jatin557](https://www.linkedin.com/in/jatin557)
+* **📦 GitHub:** [https://github.com/jatinydav557](https://github.com/jatinydav557)
+* **📬 Email:** [jatinydav557@gmail.com](mailto:jatinydav557@gmail.com)
+* **📱 Contact:** [`+91-7340386035`](tel:+917340386035)
+* **🎥 YouTube:** [Checkout my other working projects](https://www.youtube.com/@jatinML/playlists)
 
-Made with ❤️ by an AI enthusiast who transforms ML, NLP, DL, GenAI, and MLOps concepts into practical, impactful solutions.
+It was a complex project.I hope you watch the demo video 
